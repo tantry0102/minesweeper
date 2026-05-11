@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Minesweeper</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>💣 Minesweeper</h1>
+
+<div class="top-select">
+
+<select id="difficulty" onchange="changeDifficulty()">
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
+</select>
+
+<div class="best-score">
+🏆 Best:
+<span id="bestTime">-</span>
+</div>
+
+</div>
+
+<div class="topbar">
+
+<div class="info">
+🚩 <span id="mineCount">15</span>
+</div>
+
+<button onclick="startGame()">🙂</button>
+
+<div class="info">
+⏱ <span id="timer">0</span>
+</div>
+
+</div>
+
+<div id="board"></div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
