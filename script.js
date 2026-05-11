@@ -38,6 +38,7 @@ mines = 100;
 
 boardEl.style.gridTemplateColumns = `repeat(${cols},32px)`;
 
+renderBestScore();
 startGame();
 }
 
@@ -62,10 +63,6 @@ function startGame(){
 
 explosionTimeouts.forEach(t=>clearTimeout(t));
 explosionTimeouts = [];
-
-board = [];
-gameOver = false;
-
 
 board = [];
 gameOver = false;
@@ -467,7 +464,7 @@ const diff = document.getElementById('difficulty').value;
 
 const key = `minesweeper_best_${diff}`;
 
-const best = localStorage.getItem(key);
+const best = Number(localStorage.getItem(key));
 
 if(!best || timer < best){
 localStorage.setItem(key,timer);
